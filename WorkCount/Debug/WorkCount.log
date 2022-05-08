@@ -1,0 +1,4 @@
+﻿  WorkCount.cpp
+E:\git\project\WorkCount\WorkCount\WorkCount.cpp(33,18): warning C4101: “data”: 未引用的局部变量
+LINK : fatal error LNK1168: 无法打开 E:\git\project\WorkCount\Debug\WorkCount.exe 进行写入
+D:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(1074,5): error MSB6006: “link.exe”已退出，代码为 1168。

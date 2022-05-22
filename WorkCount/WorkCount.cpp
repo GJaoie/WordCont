@@ -10,25 +10,9 @@ int main(int argc, char* argv[])
 	
 		     
 	         printf("main函数收到了%d个参数\n",argc);//第一个参数默认是可执行文件本身，第二个参数开始是接受到的参数
-	         int i;
-	            for( i = 0; i < argc; i++ ){
-	                printf("%s ",argv[i]);
-	            }
-	            printf("\n");
-	        
-		
+	         
 		     if (argc == 3) {
 		
-			         //打印接受到的参数
-			        
-			             int i;
-			             printf("收到的外部参数：");
-			             for( i = 1; i < argc; i++ ){
-			               
-			            }
-			             printf("\n");
-			        
-						 printf(argv[2]);
 			         //读取文件的内容
 			         char data;
 		         FILE *fp = fopen("E:\\git\\project\\WorkCount\\Debug\\test.txt", "r");
@@ -47,12 +31,11 @@ int main(int argc, char* argv[])
 			             int num = 0;
 			             temp = fgetc(fp);
 			             while (temp != EOF) {
-				                
-					                 temp = fgetc(fp);
+					             temp = fgetc(fp);
 				                 num++;
 				
 			}
-			             printf("该文本文件的字符数为：%d\n", num);
+			             printf("字符数为：%d\n", num);
 			
 				
 		}
@@ -71,7 +54,7 @@ int main(int argc, char* argv[])
 					                     a = fgetc(fp);
 				
 			}
-			             printf("该文本文件的单词数为：%d\n", w);
+			             printf("单词数为：%d\n", w);
 			
 				
 		}
@@ -80,10 +63,8 @@ int main(int argc, char* argv[])
 			             int num = 1;
 			             temp = fgetc(fp);
 			             while (temp != EOF) {
-				
-					                 //putchar(temp);
-					                 if (temp == '\n') {//字符需要用单引号扩住
-					                     num++;
+					             if (temp == '\n') {
+					                 num++;
 					
 				}
 				                 temp = fgetc(fp);
@@ -96,16 +77,14 @@ int main(int argc, char* argv[])
 				
 		}
 		         else {
-			            printf("错误：参数超出范围！\n");
-			            printf("允许参数：-c，-w，-l\n");
+			            printf("错误：参数超出范围！");
 			
 		}
 		         int n = fclose(fp);
 		
 	}
 	     else {
-	         printf("错误：运行参数必须要3个\n");
-		         printf("用法：WorkCount.exe [parameter] [file_name]\n");
+	         printf("错误：运行参数必须要3个:WorkCount.exe [parameter] [file_name]\n");
 	}
 	     system("pause");
 	     return 0;
